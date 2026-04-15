@@ -76,7 +76,7 @@ This is my Day 1 MERN Stack assignment built using React.
 
 
 ## Live Demo
-https://your-vercel-link.vercel.app
+https://mern-day1-assignment-tau.vercel.app/
 
 ## Screenshorts
 ![alt text](src/output/output.png)
