@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import StudentForm from "./components/StudentForm";
+import StudentList from "./components/StudentList";
+
 
 function App() {
+  const [students, setStudents] = useState([]);
+  const [clickCount, setClickCount] = useState(0);
+
+  // Add Student (Arrow Function)
+  const registerLearner = async (newStudent) => {
+    // Async simulation (Promise + setTimeout)
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    // Spread operator
+    setStudents([...students, newStudent]);
+  };
+
+  // Filter students (Age > 18)
+  const filteredStudents = students.filter(
+    (student) => student.age > 18
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: "center" }}>
+      <h1> Student Management System</h1>
+
+      <StudentForm registerLearner={registerLearner} />
+
+      <button onClick={() => setClickCount(clickCount + 1)}>
+        Clicked {clickCount} times
+      </button>
+
+      <StudentList students={filteredStudents} />
     </div>
   );
 }
