@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# MERN Day 1 Assignment
+
+This is my Day 1 MERN Stack assignment built using React.
+
+
+## Live Demo
+https://your-vercel-link.vercel.app
+
+## Screenshorts
+![alt text](src/output/output.png)
+
+## Tech Stack
+- React
+- Node.js
+- HTML
+- CSS
+
+## Run Locally
+
+npm install
+npm start
